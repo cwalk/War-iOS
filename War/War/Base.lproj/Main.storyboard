@@ -17,6 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2F2-To-glX" userLabel="BackgroundImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.50888765369800526" blue="0.019364410832723444" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfg-62-gqH" userLabel="CardContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
@@ -124,39 +128,53 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2F2-To-glX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="8TB-TE-SrC"/>
                             <constraint firstAttribute="centerY" secondItem="Tfg-62-gqH" secondAttribute="centerY" id="EBu-tx-4kb"/>
+                            <constraint firstAttribute="trailing" secondItem="2F2-To-glX" secondAttribute="trailing" id="JMi-F0-ZMv"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="2F2-To-glX" secondAttribute="bottom" id="OuA-ZH-5YA"/>
                             <constraint firstItem="tBv-ny-X9e" firstAttribute="top" secondItem="Tfg-62-gqH" secondAttribute="bottom" id="b9l-DX-ZQX"/>
                             <constraint firstAttribute="centerX" secondItem="Tfg-62-gqH" secondAttribute="centerX" id="bz9-hz-aik"/>
                             <constraint firstItem="tBv-ny-X9e" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="lwt-Oy-g7l"/>
+                            <constraint firstItem="2F2-To-glX" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="ok5-BJ-QlY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tBv-ny-X9e" secondAttribute="trailing" id="rdw-wP-kdX"/>
                             <constraint firstAttribute="bottomMargin" secondItem="tBv-ny-X9e" secondAttribute="bottom" id="uY5-Ce-L9c"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="2F2-To-glX"/>
                                 <exclude reference="Tfg-62-gqH"/>
                                 <exclude reference="tBv-ny-X9e"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="8TB-TE-SrC"/>
+                                <exclude reference="JMi-F0-ZMv"/>
+                                <exclude reference="ok5-BJ-QlY"/>
                                 <exclude reference="EBu-tx-4kb"/>
                                 <exclude reference="bz9-hz-aik"/>
                                 <exclude reference="b9l-DX-ZQX"/>
                                 <exclude reference="lwt-Oy-g7l"/>
                                 <exclude reference="rdw-wP-kdX"/>
                                 <exclude reference="uY5-Ce-L9c"/>
+                                <exclude reference="OuA-ZH-5YA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="2F2-To-glX"/>
                                 <include reference="Tfg-62-gqH"/>
                                 <include reference="tBv-ny-X9e"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="8TB-TE-SrC"/>
+                                <include reference="JMi-F0-ZMv"/>
+                                <include reference="ok5-BJ-QlY"/>
                                 <include reference="EBu-tx-4kb"/>
                                 <include reference="bz9-hz-aik"/>
                                 <include reference="b9l-DX-ZQX"/>
                                 <include reference="lwt-Oy-g7l"/>
                                 <include reference="rdw-wP-kdX"/>
                                 <include reference="uY5-Ce-L9c"/>
+                                <include reference="OuA-ZH-5YA"/>
                             </mask>
                         </variation>
                     </view>
