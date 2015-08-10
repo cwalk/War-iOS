@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -44,7 +45,6 @@
                                         <color key="backgroundColor" red="0.027818642461367893" green="0.14601892866695643" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.19725611158381096" green="0.9542681849431448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="CJY-QB-TYW" firstAttribute="leading" secondItem="Tfg-62-gqH" secondAttribute="leading" id="A4P-os-qUL"/>
                                     <constraint firstAttribute="trailing" secondItem="xTH-vp-TIv" secondAttribute="trailing" id="F4J-Ib-f3Z"/>
@@ -88,28 +88,75 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBv-ny-X9e" userLabel="PlayButtonContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GC6-ml-vJZ" userLabel="PlayRoundButton">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Play Round">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="GC6-ml-vJZ" secondAttribute="centerX" id="NAi-tZ-dbt"/>
+                                    <constraint firstAttribute="centerY" secondItem="GC6-ml-vJZ" secondAttribute="centerY" id="mpY-Pu-HHk"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="GC6-ml-vJZ"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="NAi-tZ-dbt"/>
+                                        <exclude reference="mpY-Pu-HHk"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="GC6-ml-vJZ"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="NAi-tZ-dbt"/>
+                                        <include reference="mpY-Pu-HHk"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="Tfg-62-gqH" secondAttribute="centerY" id="EBu-tx-4kb"/>
+                            <constraint firstItem="tBv-ny-X9e" firstAttribute="top" secondItem="Tfg-62-gqH" secondAttribute="bottom" id="b9l-DX-ZQX"/>
                             <constraint firstAttribute="centerX" secondItem="Tfg-62-gqH" secondAttribute="centerX" id="bz9-hz-aik"/>
+                            <constraint firstItem="tBv-ny-X9e" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="lwt-Oy-g7l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tBv-ny-X9e" secondAttribute="trailing" id="rdw-wP-kdX"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="tBv-ny-X9e" secondAttribute="bottom" id="uY5-Ce-L9c"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Tfg-62-gqH"/>
+                                <exclude reference="tBv-ny-X9e"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="EBu-tx-4kb"/>
                                 <exclude reference="bz9-hz-aik"/>
+                                <exclude reference="b9l-DX-ZQX"/>
+                                <exclude reference="lwt-Oy-g7l"/>
+                                <exclude reference="rdw-wP-kdX"/>
+                                <exclude reference="uY5-Ce-L9c"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Tfg-62-gqH"/>
+                                <include reference="tBv-ny-X9e"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="EBu-tx-4kb"/>
                                 <include reference="bz9-hz-aik"/>
+                                <include reference="b9l-DX-ZQX"/>
+                                <include reference="lwt-Oy-g7l"/>
+                                <include reference="rdw-wP-kdX"/>
+                                <include reference="uY5-Ce-L9c"/>
                             </mask>
                         </variation>
                     </view>
