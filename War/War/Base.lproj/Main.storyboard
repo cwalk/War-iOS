@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,66 +16,100 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CJY-QB-TYW" userLabel="FirstCardImage">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" red="1" green="0.010051519906342232" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfg-62-gqH" userLabel="CardContainerView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CJY-QB-TYW" userLabel="FirstCardImage">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <color key="backgroundColor" red="1" green="0.010051519906342232" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="26U-MJ-xzi"/>
+                                            <constraint firstAttribute="width" constant="120" id="WaH-MP-9zd"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="26U-MJ-xzi"/>
+                                                <exclude reference="WaH-MP-9zd"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="26U-MJ-xzi"/>
+                                                <include reference="WaH-MP-9zd"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xTH-vp-TIv" userLabel="SecondCardImage">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <color key="backgroundColor" red="0.027818642461367893" green="0.14601892866695643" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.19725611158381096" green="0.9542681849431448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="26U-MJ-xzi"/>
-                                    <constraint firstAttribute="width" constant="120" id="WaH-MP-9zd"/>
+                                    <constraint firstItem="CJY-QB-TYW" firstAttribute="leading" secondItem="Tfg-62-gqH" secondAttribute="leading" id="A4P-os-qUL"/>
+                                    <constraint firstAttribute="trailing" secondItem="xTH-vp-TIv" secondAttribute="trailing" id="F4J-Ib-f3Z"/>
+                                    <constraint firstItem="CJY-QB-TYW" firstAttribute="width" secondItem="xTH-vp-TIv" secondAttribute="width" id="NFo-9i-6XZ"/>
+                                    <constraint firstItem="xTH-vp-TIv" firstAttribute="top" secondItem="Tfg-62-gqH" secondAttribute="top" id="NSe-eI-Ryg"/>
+                                    <constraint firstItem="CJY-QB-TYW" firstAttribute="height" secondItem="xTH-vp-TIv" secondAttribute="height" id="OoX-67-PCu"/>
+                                    <constraint firstItem="CJY-QB-TYW" firstAttribute="top" secondItem="Tfg-62-gqH" secondAttribute="top" id="SNa-2V-xke"/>
+                                    <constraint firstAttribute="height" constant="170" id="cZG-eS-Ga9"/>
+                                    <constraint firstAttribute="width" constant="280" id="lyD-nR-aiE"/>
                                 </constraints>
                                 <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="CJY-QB-TYW"/>
+                                        <exclude reference="xTH-vp-TIv"/>
+                                    </mask>
                                     <mask key="constraints">
-                                        <exclude reference="26U-MJ-xzi"/>
-                                        <exclude reference="WaH-MP-9zd"/>
+                                        <exclude reference="cZG-eS-Ga9"/>
+                                        <exclude reference="lyD-nR-aiE"/>
+                                        <exclude reference="A4P-os-qUL"/>
+                                        <exclude reference="NFo-9i-6XZ"/>
+                                        <exclude reference="OoX-67-PCu"/>
+                                        <exclude reference="SNa-2V-xke"/>
+                                        <exclude reference="F4J-Ib-f3Z"/>
+                                        <exclude reference="NSe-eI-Ryg"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="CJY-QB-TYW"/>
+                                        <include reference="xTH-vp-TIv"/>
+                                    </mask>
                                     <mask key="constraints">
-                                        <include reference="26U-MJ-xzi"/>
-                                        <include reference="WaH-MP-9zd"/>
+                                        <include reference="cZG-eS-Ga9"/>
+                                        <include reference="lyD-nR-aiE"/>
+                                        <include reference="A4P-os-qUL"/>
+                                        <include reference="NFo-9i-6XZ"/>
+                                        <include reference="OoX-67-PCu"/>
+                                        <include reference="SNa-2V-xke"/>
+                                        <include reference="F4J-Ib-f3Z"/>
+                                        <include reference="NSe-eI-Ryg"/>
                                     </mask>
                                 </variation>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xTH-vp-TIv" userLabel="SecondCardImage">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.027818642461367893" green="0.14601892866695643" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CJY-QB-TYW" firstAttribute="height" secondItem="xTH-vp-TIv" secondAttribute="height" id="ATN-Rr-nDC"/>
-                            <constraint firstItem="CJY-QB-TYW" firstAttribute="width" secondItem="xTH-vp-TIv" secondAttribute="width" id="FUN-AL-nuu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xTH-vp-TIv" secondAttribute="trailing" constant="50" id="R3M-DO-pA4"/>
-                            <constraint firstAttribute="centerY" secondItem="CJY-QB-TYW" secondAttribute="centerY" id="l8Y-jF-7bE"/>
-                            <constraint firstAttribute="centerY" secondItem="xTH-vp-TIv" secondAttribute="centerY" id="mxH-Lj-vFp"/>
-                            <constraint firstItem="CJY-QB-TYW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="qdM-Lv-Hsf"/>
+                            <constraint firstAttribute="centerY" secondItem="Tfg-62-gqH" secondAttribute="centerY" id="EBu-tx-4kb"/>
+                            <constraint firstAttribute="centerX" secondItem="Tfg-62-gqH" secondAttribute="centerX" id="bz9-hz-aik"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="CJY-QB-TYW"/>
-                                <exclude reference="xTH-vp-TIv"/>
+                                <exclude reference="Tfg-62-gqH"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="R3M-DO-pA4"/>
-                                <exclude reference="mxH-Lj-vFp"/>
-                                <exclude reference="ATN-Rr-nDC"/>
-                                <exclude reference="FUN-AL-nuu"/>
-                                <exclude reference="l8Y-jF-7bE"/>
-                                <exclude reference="qdM-Lv-Hsf"/>
+                                <exclude reference="EBu-tx-4kb"/>
+                                <exclude reference="bz9-hz-aik"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="CJY-QB-TYW"/>
-                                <include reference="xTH-vp-TIv"/>
+                                <include reference="Tfg-62-gqH"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="R3M-DO-pA4"/>
-                                <include reference="mxH-Lj-vFp"/>
-                                <include reference="ATN-Rr-nDC"/>
-                                <include reference="FUN-AL-nuu"/>
-                                <include reference="l8Y-jF-7bE"/>
-                                <include reference="qdM-Lv-Hsf"/>
+                                <include reference="EBu-tx-4kb"/>
+                                <include reference="bz9-hz-aik"/>
                             </mask>
                         </variation>
                     </view>
