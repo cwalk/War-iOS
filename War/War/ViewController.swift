@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondCardImageView: UIImageView!
     @IBOutlet weak var playRoundButton: UIButton!
     @IBOutlet weak var backgroundImageView: UIImageView!
+    var cardNamesArray:[String] = ["card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "card11", "card12", "card13"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,19 +31,19 @@ class ViewController: UIViewController {
     @IBAction func playRoundTapped(sender: UIButton) {
         
         //Randomize a number for the first imageview
-        var firstRandomNumber = arc4random_uniform(13) + 1
+        var firstRandomNumber:Int = Int(arc4random_uniform(13))
         
         //Construct a string with the random number
-        var firstCardString:String = String(format: "card%i", firstRandomNumber)
+        var firstCardString:String = self.cardNamesArray[firstRandomNumber]
         
         //Set the first card image view to the asset corresponding to the randomized number
         self.firstCardImageView.image = UIImage(named: firstCardString)
         
         //Randomize a number for the second imageview
-        var secondRandomNumber = arc4random_uniform(13) + 1
+        var secondRandomNumber:Int = Int(arc4random_uniform(13))
         
         //Construc a string with the random number
-        var secondCardString:String = String(format: "card%i", secondRandomNumber)
+        var secondCardString:String = self.cardNamesArray[secondRandomNumber]
         
         //Set the second card image view to the asset corresponding to the randomized number
         self.secondCardImageView.image = UIImage(named: secondCardString)
