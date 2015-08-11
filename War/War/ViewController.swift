@@ -19,8 +19,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        self.playRoundButton.setTitle("Play", forState: UIControlState.Normal)
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +45,20 @@ class ViewController: UIViewController {
         
         //Set the second card image view to the asset corresponding to the randomized number
         self.secondCardImageView.image = UIImage(named: secondCardString)
+        
+        //Determind the higher valued card
+        if(firstRandomNumber > secondRandomNumber){
+            
+            //TODO: first card is larger value
+        }
+        else if (firstRandomNumber == secondRandomNumber) {
+            
+            //TODO: both card values are equal
+        }
+        else {
+            
+            //TODO: second card is larger value
+        }
     }
     
 }
