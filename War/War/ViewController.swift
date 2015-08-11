@@ -29,7 +29,8 @@ class ViewController: UIViewController {
 
     @IBAction func playRoundTapped(sender: UIButton) {
         
-        self.playRoundButton.setTitle("Play Round", forState: UIControlState.Normal)
+        self.firstCardImageView.image = UIImage(named: "card1")
+        self.secondCardImageView.image = UIImage(named: "card11")
     }
     
 }
