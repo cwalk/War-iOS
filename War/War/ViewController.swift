@@ -29,8 +29,23 @@ class ViewController: UIViewController {
 
     @IBAction func playRoundTapped(sender: UIButton) {
         
-        self.firstCardImageView.image = UIImage(named: "card1")
-        self.secondCardImageView.image = UIImage(named: "card11")
+        //Randomize a number for the first imageview
+        var firstRandomNumber = arc4random_uniform(13) + 1
+        
+        //Construct a string with the random number
+        var firstCardString:String = String(format: "card%i", firstRandomNumber)
+        
+        //Set the first card image view to the asset corresponding to the randomized number
+        self.firstCardImageView.image = UIImage(named: firstCardString)
+        
+        //Randomize a number for the second imageview
+        var secondRandomNumber = arc4random_uniform(13) + 1
+        
+        //Construc a string with the random number
+        var secondCardString:String = String(format: "card%i", secondRandomNumber)
+        
+        //Set the second card image view to the asset corresponding to the randomized number
+        self.secondCardImageView.image = UIImage(named: secondCardString)
     }
     
 }
