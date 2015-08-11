@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>262ABDAF-EA87-41D9-B780-F8AEDE01AD04</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>War</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>6941F644CB306F99CD7CEADB51692E07AC146B86</key>
 		<string>github.com:cwalk/War-iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>War/War.xcodeproj/project.xcworkspace</string>
+	<string>War/War.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>6941F644CB306F99CD7CEADB51692E07AC146B86</key>

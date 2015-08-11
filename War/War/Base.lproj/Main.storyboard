@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -146,6 +147,7 @@
                                 <exclude reference="tBv-ny-X9e"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="OuA-ZH-5YA"/>
                                 <exclude reference="8TB-TE-SrC"/>
                                 <exclude reference="JMi-F0-ZMv"/>
                                 <exclude reference="ok5-BJ-QlY"/>
@@ -155,7 +157,6 @@
                                 <exclude reference="lwt-Oy-g7l"/>
                                 <exclude reference="rdw-wP-kdX"/>
                                 <exclude reference="uY5-Ce-L9c"/>
-                                <exclude reference="OuA-ZH-5YA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -165,6 +166,7 @@
                                 <include reference="tBv-ny-X9e"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="OuA-ZH-5YA"/>
                                 <include reference="8TB-TE-SrC"/>
                                 <include reference="JMi-F0-ZMv"/>
                                 <include reference="ok5-BJ-QlY"/>
@@ -174,7 +176,6 @@
                                 <include reference="lwt-Oy-g7l"/>
                                 <include reference="rdw-wP-kdX"/>
                                 <include reference="uY5-Ce-L9c"/>
-                                <include reference="OuA-ZH-5YA"/>
                             </mask>
                         </variation>
                     </view>
