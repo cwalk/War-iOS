@@ -257,8 +257,10 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="2F2-To-glX" id="qGy-qc-yOX"/>
+                        <outlet property="enemyScore" destination="xLa-er-bFf" id="rMW-SF-tKT"/>
                         <outlet property="firstCardImageView" destination="CJY-QB-TYW" id="gf2-rX-0Xk"/>
                         <outlet property="playRoundButton" destination="GC6-ml-vJZ" id="pep-bT-h8Z"/>
+                        <outlet property="playerScore" destination="k2A-12-fT8" id="Pkn-P4-cfm"/>
                         <outlet property="secondCardImageView" destination="xTH-vp-TIv" id="of9-5D-nuM"/>
                     </connections>
                 </viewController>
