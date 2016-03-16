@@ -3,7 +3,7 @@ War game on iOS
 
 ## Introduction
 
-This was one of my first iOS apps, written in Swift. It mimics the card game called War,, where two players split a deck of cards, and flip them over. The player with the higher value card wins a point.
+This was one of my first iOS apps, written in Swift. It mimics the card game called War, where two players split a deck of cards, and flip them over. The player with the higher value card wins a point.
 
 ## Usage
 
